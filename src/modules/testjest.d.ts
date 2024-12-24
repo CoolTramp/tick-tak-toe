@@ -1,1 +1,1 @@
-export declare function test(params: number): number;
+export declare function test1(params: number): number;

@@ -1,0 +1,42 @@
+#new-game {
+  display: flex;
+}
+
+#btn-new-game {
+  font-size: 4vw;
+  padding: 0 30px;
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  background-color: rgb(166, 235, 166);
+  color: rgba(0, 0, 0, 0.72);
+  transition: 2s all;
+  animation: takeoff 5s infinite;
+}
+
+/* #btn-new-game:hover {
+  background-color: rgb(80, 228, 80);
+} */
+
+@keyframes takeoff {
+  0% {
+    background-color: rgb(64, 238, 64);
+    transform: translateY(0);
+  }
+  25% {
+    background-color: rgb(159, 250, 159);
+    transform: translateY(10px);
+  }
+  50% {
+    background-color: rgb(64, 238, 64);
+    transform: translateY(0);
+  }
+  75% {
+    background-color: rgb(159, 250, 159);
+    transform: translateY(10px);
+  }
+  100% {
+    background-color: rgb(64, 238, 64);
+    transform: translateY(0);
+  }
+}

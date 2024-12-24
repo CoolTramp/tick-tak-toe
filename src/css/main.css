@@ -1,0 +1,10 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  position: relative;
+  height: 85vh;
+  border: 1px solid rgba(128, 128, 128, 0.1);
+}
