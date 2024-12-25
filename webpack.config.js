@@ -3,25 +3,23 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.ts", // Точка входа для TypeScript
+  entry: "./src/index.ts",
   output: {
-    filename: "bundle.js", // Название скомпилированного JavaScript файла
-    path: path.resolve(__dirname, "dist"), // Папка для итоговых файлов
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true, // Очищаем dist перед сборкой
   },
   module: {
     rules: [
-      // Для TypeScript файлов
       {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
       },
-      // Для CSS файлов
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
-      // Если хотите использовать SCSS/SASS, добавьте это правило
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
@@ -29,16 +27,19 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"], // Для разрешения расширений файлов
+    extensions: [".ts", ".tsx", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html", // Указываем путь к шаблону HTML
+      template: "./src/index.html",
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 9000,
+    static: path.resolve(__dirname, "dist"), // Путь к папке dist
+    port: 5500,
+    hot: true,
+    open: true,
+    historyApiFallback: true, // Для SPA
+    watchFiles: ["src/**/*.html", "src/**/*.ts"],
   },
 };

@@ -1,8 +1,36 @@
+:root {
+  --heading-tik-tak-toe-size: 4vw;
+}
+
 header {
   width: 100vw;
 }
 
-header > div {
-  font-size: 4vw;
+#heading-tik-tak-toe {
+  font-size: var(--heading-tik-tak-toe-size);
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --heading-tik-tak-toe-size: 10vw;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  :root {
+    --heading-tik-tak-toe-size: 9vw;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 2048px) {
+  :root {
+    --heading-tik-tak-toe-size: 5vw;
+  }
+}
+
+@media screen and (min-width: 2049px) {
+  :root {
+    --heading-tik-tak-toe-size: 3vw;
+  }
 }

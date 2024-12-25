@@ -1,9 +1,10 @@
 #new-game {
-  display: flex;
+  position: absolute;
+  top: 50%;
 }
 
 #btn-new-game {
-  font-size: 4vw;
+  font-size: 3vw;
   padding: 0 30px;
   border-radius: 40px;
   border: 0;
@@ -13,10 +14,6 @@
   transition: 2s all;
   animation: takeoff 5s infinite;
 }
-
-/* #btn-new-game:hover {
-  background-color: rgb(80, 228, 80);
-} */
 
 @keyframes takeoff {
   0% {

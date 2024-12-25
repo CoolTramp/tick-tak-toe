@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `:root {\r\n  --cell-width: 10vw;\r\n}\r\n#box {\r\n  display: none;\r\n  width: 34vw;\r\n  aspect-ratio: 1/1;\r\n  /* display: grid; */\r\n  grid-template-rows: repeat(3, 11vw);\r\n  grid-template-columns: repeat(3, 11vw);\r\n  border: 1px solid rgba(0, 0, 0, 0.406);\r\n}\r\n\r\n.cell {\r\n  margin: 1vw;\r\n  width: 10vw;\r\n  aspect-ratio: 1/1;\r\n  cursor: pointer;\r\n}\r\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://src/./src/css/box/box.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `#box {\r\n  width: 34vw;\r\n  aspect-ratio: 1/1;\r\n  /* display: grid; */\r\n  grid-template-rows: repeat(3, 11vw);\r\n  grid-template-columns: repeat(3, 11vw);\r\n  border: 1px solid rgba(0, 0, 0, 0.406);\r\n  transition: 1s transform;\r\n}\r\n\r\n.cell {\r\n  margin: 1vw;\r\n  width: 10vw;\r\n  aspect-ratio: 1/1;\r\n  cursor: pointer;\r\n}\r\n\r\n.hide-box {\r\n  display: none;\r\n  transform: translateY(-100hv);\r\n}\r\n.show-box {\r\n  display: grid;\r\n}\r\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://src/./src/css/box/box.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -196,7 +196,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n__webpack_require__(/*! ../../../../../../src/css/body.css */ \"./src/css/body.css\");\n__webpack_require__(/*! ../../../../../../src/css/box/box.css */ \"./src/css/box/box.css\");\n__webpack_require__(/*! ../../../../../../src/css/header.css */ \"./src/css/header.css\");\n__webpack_require__(/*! ../../../../../../src/css/main.css */ \"./src/css/main.css\");\n__webpack_require__(/*! ../../../../../../src/css/new-game.css */ \"./src/css/new-game.css\");\n\n\n//# sourceURL=webpack://src/./src/index.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\n__webpack_require__(/*! ../../../../../../src/css/body.css */ \"./src/css/body.css\");\n__webpack_require__(/*! ../../../../../../src/css/box/box.css */ \"./src/css/box/box.css\");\n__webpack_require__(/*! ../../../../../../src/css/header.css */ \"./src/css/header.css\");\n__webpack_require__(/*! ../../../../../../src/css/main.css */ \"./src/css/main.css\");\n__webpack_require__(/*! ../../../../../../src/css/new-game.css */ \"./src/css/new-game.css\");\n__webpack_require__(/*! ./modules/listeners/listeners */ \"./src/modules/listeners/listeners.ts\");\n__webpack_require__(/*! ./modules/interfaceNewGame/interface-new-game */ \"./src/modules/interfaceNewGame/interface-new-game.ts\");\n\n\n//# sourceURL=webpack://src/./src/index.ts?");
+
+/***/ }),
+
+/***/ "./src/modules/interfaceNewGame/interface-new-game.ts":
+/*!************************************************************!*\
+  !*** ./src/modules/interfaceNewGame/interface-new-game.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.showNewBox = showNewBox;\nconst box = document.getElementById(\"box\");\nfunction showNewBox() {\n    if (box) {\n        box.classList.remove(\"hide-box\");\n        box.classList.add(\"show-box\");\n    }\n}\n\n\n//# sourceURL=webpack://src/./src/modules/interfaceNewGame/interface-new-game.ts?");
+
+/***/ }),
+
+/***/ "./src/modules/listeners/listeners.ts":
+/*!********************************************!*\
+  !*** ./src/modules/listeners/listeners.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst interface_new_game_1 = __webpack_require__(/*! ../interfaceNewGame/interface-new-game */ \"./src/modules/interfaceNewGame/interface-new-game.ts\");\nconst btnNewGame = document.getElementById(\"btn-new-game\");\nif (btnNewGame) {\n    btnNewGame.addEventListener(\"click\", (event) => {\n        (0, interface_new_game_1.showNewBox)();\n        console.log(event.target);\n    });\n}\n\n\n//# sourceURL=webpack://src/./src/modules/listeners/listeners.ts?");
 
 /***/ })
 
