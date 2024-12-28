@@ -1,0 +1,36 @@
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  width: var(--cell-side-width);
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --cell-side-width: 15vw;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  :root {
+    --cell-side-width: 13vw;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  :root {
+    --cell-side-width: 150px;
+  }
+}
+
+/* max-height */
+@media screen and (max-height: 600px) {
+  :root {
+    --cell-side-width: 80px;
+  }
+}

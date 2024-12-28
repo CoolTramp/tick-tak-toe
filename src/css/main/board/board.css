@@ -1,0 +1,20 @@
+:root {
+  --cell-side-width: 10vw;
+}
+
+#board {
+  display: grid;
+  grid-template-rows: repeat(3, var(--cell-side-width));
+  grid-template-columns: repeat(3, var(--cell-side-width));
+  border: 1px solid rgba(0, 0, 0, 0.406);
+  transition: 1s all;
+}
+
+.hide-board {
+  visibility: hidden;
+  transform: translateY(100px);
+}
+
+.show-board {
+  transform: translateY(0);
+}

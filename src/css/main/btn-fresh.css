@@ -1,0 +1,81 @@
+:root {
+  --btn-fresh-width: 100px;
+}
+
+#btn-fresh {
+  position: relative;
+  top: 50px;
+  width: var(--btn-fresh-width);
+  aspect-ratio: 1/1;
+  background-image: url("../assets/img/refresh.svg");
+  background-repeat: no-repeat;
+  background-position: -4px;
+  border-radius: 10px;
+  background-size: var(--btn-fresh-width);
+  cursor: pointer;
+  background-color: lightgreen;
+  transition: 1s all;
+  animation-fill-mode: forwards;
+}
+
+@keyframes takeoff {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hide-fresh-btn {
+  animation: hide-fresh-btn 1s;
+  pointer-events: none;
+}
+
+@keyframes hide-fresh-btn {
+  to {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+.show-fresh-btn {
+  animation: show-fresh-btn 1s linear, takeoff 2s linear infinite 1s;
+}
+
+@keyframes show-fresh-btn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --btn-fresh-width: 60px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  :root {
+    --btn-fresh-width: 70px;
+  }
+}
+
+/* max-height */
+@media screen and (max-height: 600px) {
+  :root {
+    --btn-fresh-width: 50px;
+  }
+  #btn-fresh {
+    top: 20px;
+  }
+}

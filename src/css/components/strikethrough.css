@@ -1,0 +1,118 @@
+:root {
+  --strikethrough--width: 4vw;
+  --strikethrough--height: 4vw;
+  --strikethrough--offset: 20vw;
+}
+
+#strikethrough {
+  width: var(--strikethrough--width);
+  height: var(--strikethrough--height);
+  background-color: rgb(196, 26, 63);
+  /* background-color: rgba(0, 0, 0, 0.715); */
+  border-radius: 100px;
+  position: absolute;
+  z-index: 1;
+}
+
+/*  */
+
+.show {
+  animation: show 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  from {
+    width: 0;
+  }
+}
+
+.hide {
+  animation: hide 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide {
+  to {
+    width: 0;
+  }
+}
+
+/*  */
+
+/* .horizontal { */
+/* this class no need for setting */
+/* } */
+
+.vertical {
+  transform: rotate(90deg);
+}
+
+.left-diagonal {
+  transform: rotate(45deg) translate(var(--strikethrough--offset));
+}
+
+.right-diagonal {
+  transform: rotate(-45deg) translate(calc(-1 * var(--strikethrough--offset)));
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --strikethrough--height: 1.4vw;
+  }
+  .vertical,
+  .horizontal {
+    --strikethrough--width: 60vw;
+  }
+  .right-diagonal,
+  .left-diagonal {
+    --strikethrough--offset: 20vw;
+    --strikethrough--width: 70vw;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  :root {
+    --strikethrough--height: 1.5vw;
+  }
+  .vertical,
+  .horizontal {
+    --strikethrough--width: 50vw;
+  }
+  .right-diagonal,
+  .left-diagonal {
+    --strikethrough--offset: 18vw;
+    --strikethrough--width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  :root {
+    --strikethrough--height: 15px;
+  }
+  .vertical,
+  .horizontal {
+    --strikethrough--width: 600px;
+  }
+  .right-diagonal,
+  .left-diagonal {
+    --strikethrough--offset: 225px;
+    --strikethrough--width: 675px;
+  }
+}
+
+/* max-height */
+@media screen and (max-height: 600px) {
+  :root {
+    --strikethrough--height: 5px;
+  }
+  .vertical,
+  .horizontal {
+    --strikethrough--width: 300px;
+  }
+  .right-diagonal,
+  .left-diagonal {
+    --strikethrough--offset: 7vw;
+    --strikethrough--width: 24vw;
+  }
+}

@@ -1,0 +1,9 @@
+.chosen-circle {
+  background-image: url("../assets/img/cir.svg");
+  background-size: calc(var(--cell-side-width) - 1vw);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  position: relative;
+  /* background-color: rgba(128, 128, 128, 0.437); */
+}
