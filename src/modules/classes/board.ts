@@ -1,28 +1,31 @@
-import { Players } from "./players";
 import { Figure } from "./figure";
 import { Cells } from "./cells";
 import { Strikethrough } from "./strikethrough/strikethrough";
-
-import { DeterminWinner } from "./logic/determinWinner";
+// import { DeterminWinner } from "./logic/determinWinner";
 
 /**
  * The Game class, serves for saving game's data (current player)
  */
 
 export class Board {
-  private players = new Players();
-
   private figures = new Figure();
   private cells = new Cells();
   private strikethrough = new Strikethrough();
 
-  private winner = new DeterminWinner();
   private setWinner: (player: Player) => void;
+  private getCurrentPlayer: () => Player;
+  private togglePlayer: () => Player;
+  private move: (cell: number, player: Player) => WinnerData | null;
 
   public noAvailableCells = this.cells.noAvailableCells;
 
-  constructor(setWinner: (player: Player) => void) {
+  constructor(methods: BoardMethods) {
+    const { setWinner, getCurrentPlayer, togglePlayer, move } = methods;
+
     this.setWinner = setWinner;
+    this.getCurrentPlayer = getCurrentPlayer;
+    this.togglePlayer = togglePlayer;
+    this.move = move;
   }
 
   /**
@@ -36,10 +39,10 @@ export class Board {
 
   makeMove(cell: HTMLElement): boolean | null {
     const cellNumber = this.getCellNumber(cell);
-    if (cellNumber === null) return null;
 
-    const player = this.players.getCurrentPlayer();
-    const isWinner = this.winner.makeMove(cellNumber, player);
+    if (cellNumber === null) return null;
+    const player = this.getCurrentPlayer();
+    const isWinner = this.move(cellNumber, player);
 
     this.markCell(cell);
 
@@ -71,9 +74,5 @@ export class Board {
   private getCellNumber(cell: HTMLElement): number | null {
     const cellNumber: string | null = cell.getAttribute("data");
     return cellNumber ? Number(cellNumber) : null;
-  }
-
-  private togglePlayer() {
-    return this.players.togglePlayer();
   }
 }

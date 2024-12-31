@@ -1,8 +1,3 @@
-type Combination = {
-  value: number[];
-  owner: Player | 0;
-  combinationNumber: number;
-};
 type Combinations = Combination[];
 
 export class DeterminWinner {
@@ -35,9 +30,8 @@ export class DeterminWinner {
    * @param player - the player's number, may be 1 or 2
    * @returns
    */
-  makeMove(cell: number, player: Player) {
+  makeMove(cell: number, player: Player): WinnerData | null {
     if (!this.isCellInArray(cell, this.availableCells)) return null;
-
     this.deleteChosenCellFromAvailables(cell);
     this.recordPlayerMove(cell, player);
 
@@ -128,10 +122,6 @@ export class DeterminWinner {
     combination.owner = player;
   }
 
-  private removeCombination(index: number): void {
-    this.combinations.splice(index, 1);
-  }
-
   private removeCellFromCombination(
     combination: Combination,
     cell: number
@@ -144,6 +134,9 @@ export class DeterminWinner {
     if (index !== -1) {
       array.splice(index, 1);
     }
+  }
+  getCombinations() {
+    return this.combinations;
   }
 }
 

@@ -6,10 +6,25 @@ const freshBTN = new FreshBTN();
 
 const handleCellClick = (event: MouseEvent) => {
   const cell = event.target as HTMLElement;
-  gameManager.board.makeMove(cell);
 
-  if (gameManager.isGameOver()) {
-    freshBTN.show();
+  if (!cell || !cell.hasAttribute("data")) {
+    console.error("Clicked element is not a valid cell.");
+    return;
+  }
+
+  try {
+    gameManager.board.makeMove(cell);
+
+    const cellRobot = gameManager.robotMove();
+    if (cellRobot) {
+      gameManager.board.makeMove(cellRobot);
+    }
+
+    if (gameManager.isGameOver()) {
+      freshBTN.show();
+    }
+  } catch (error) {
+    console.error("An error occurred while making a move:", error);
   }
 };
 

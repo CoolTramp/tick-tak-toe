@@ -20,6 +20,7 @@ import "./modules/classes/players";
 import "./modules/classes/cells";
 import "./modules/classes/logic/determinWinner";
 import "./modules/classes/strikethrough/strikethrough";
+import "./modules/classes/robot/robot";
 
 import "./modules/listeners/custom";
 
